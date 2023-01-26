@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block title %}  Heart Checkup  {% endblock title %}
+
+{% block body %}
+<div class="p-3 mb-2 bg-primary text-white">
+
+<div class="container">
+    <h1 class="display-1" align="center">Heart Attack Predictor</h1>
+    <p class="lead text-center">
+        Fill the following Information for the checkup
+    </p>
+</div>
+</div>
+
+<div class="container center_div my-4 bg-transparent text-dark">
+
+    <form class="border border-4 px-3" method ="POST" action='/checkup/result'>
+   {% csrf_token %}
+        <div class="my-3 col-sm-6">
+            <label for="p0" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" id="p0" placeholder="Your name..">
+        </div>
+
+        <div class="mb-3 col-sm-3">
+            <label for="p1" class="form-label">Age</label>
+            <input type="text" class="form-control" name="age" id="p1" placeholder="Your age.." >
+        </div>
+
+        <div class="mb-3 col-sm-3">
+        <label for="p2" class="form-label">Gender</label>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="sex" id="p21" value="1">
+            <label class="form-check-label" for="p21">
+            Male
+            </label>
+            </div>
+
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="sex" id="p22" value="0">
+            <label class="form-check-label" for="p22">
+            Female
+            </label>
+            </div>
+        </div>
+
+        <div class="my-3 col-sm-3">
+        <select class="form-select" aria-label="Chest Pain type" name="chestpain">
+        <option selected>Chest Pain Type</option>
+        <option value="0">Typical Angina</option>
+        <option value="1">Atypical Angina</option>
+        <option value="2">Non-Angina</option>
+        <option value="3">Asymptomatic Angina</option>
+        </select>
+        </div>
+
+
+        <div class="mb-3 col-sm-3">
+            <label for="p4" class="form-label">Resting BP (mm Hg)</label>
+            <input type="text" class="form-control" name="rbp" id="p4" placeholder="Blood Pressure..">
+        </div>
+
+        <div class="mb-3 col-sm-3">
+            <label for="p5" class="form-label">Cholestrol (mg/dl)</label>
+            <input type="text" class="form-control" name="chol" id="p5" placeholder="Cholestrol Level..">
+        </div>
+        
+        <div class="mb-3 col-sm-3">
+            <label for="p8" class="form-label"> Heart Rate (BPM)</label>
+            <input type="text" class="form-control" name="heartrate" id="p8" placeholder="Your Heart Rate..">
+        </div>
+
+    <div class="my-4 col-sm-7">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="eia" id="p91" value="0">
+            <label class="form-check-label" for="p91">
+            Exercise induced angina = 0
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="eia" id="p92" value="1">
+            <label class="form-check-label" for="p92">
+            Exercise induced angina = 1
+            </label>
+        </div>
+    </div>
+
+        <div class="mb-3 col-.auto">
+            <label for="p10" class="form-label">ST depression induced by exercise relative to rest </label>
+            <div class="mb-3 col-sm-3">
+            <input type="text" class="form-control" name="oldpeak" id="p10" placeholder="ST depression..">
+            </div>
+        </div>
+
+    <div class="my-5 col-sm-7">
+            <select class="form-select" name="slope" aria-label="slope">
+            <option selected>Slope of Peak Exercise ST Segment</option>
+            <option value="0">Up</option>
+            <option value="1">Flat</option>
+            <option value="2">Down</option>
+            </select>
+    </div>
+
+    <div class="my-5 col-sm-7">
+            <select class="form-select" name="vessels" aria-label="Major vessels">
+            <option selected>Number of major vessels colored by flouroscopy</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            </select>
+    </div>
+
+    <div class="my-5 col-sm-7">
+            <select class="form-select" name="thal" aria-label="thal">
+            <option selected>β-Thalassemia</option>
+            <option value="1">Normal</option>
+            <option value="2">Fixed Defect</option>
+            <option value="3">Reversable Defect</option>
+            </select>
+    </div>
+
+        <button type="submit" class="btn btn-primary mb-3" value="Submit">Submit</button>
+
+    </form>
+</div>
+
+
+{% endblock body %}
+
+
+

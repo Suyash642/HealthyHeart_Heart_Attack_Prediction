@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}  Home  {% endblock title %}
+
+{% block body %}
+
+<div class="container-fluid px-0">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="https://thewellproject.org/sites/default//files/field/image/HIV-and-the-Heart.jpg" style="height: 450px" class="d-block w-100" alt="healthyheart1">
+        </div>
+        <div class="carousel-item">
+        <img src="https://www.eurocompany.it/wp-content/uploads/2019/01/AdobeStock_207081524-830x526.jpeg" style="height: 450px" class="d-block w-100" alt="healthyheart2">
+        </div>
+        <div class="carousel-item">
+        <img src="https://images.hdqwalls.com/download/love-heart-4k-fo-2048x1152.jpg" style="height: 450px" class="d-block w-100" alt="healthyheart3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+</div>
+
+<div class="container-fluid px-3 my-2">
+
+    <div class = ".col-xl">
+        <h1 class="display-3 text-danger "> Heart Attack </h1>
+    </div>
+
+    <div class="row my-4 ">
+        <div class="col-7">
+            <h2> What Is a Heart Attack? </h2>
+            
+            <p  class="lead"> 
+            A heart attack happens when something blocks the blood flow to your heart so it can’t get the oxygen it needs.
+            More than a million Americans have heart attacks each year. Heart attacks are also called myocardial infarctions (MI). "Myo" means muscle, "cardial" refers to the heart, and "infarction" means death of tissue because of a lack of blood supply. This tissue death can cause lasting damage to your heart muscle..
+            </p>
+
+            <h2> Heart Attack Symptoms </h2>
+
+            <p class="lead">
+            Symptoms of a heart attack include:</p>
+                <ul class="lead">
+                    <li><i class="fa-li fa fa-square"></i>Discomfort, pressure, heaviness, tightness, squeezing, or pain in your chest or arm or below your breastbone </li>
+                    <li><i class="fa-li fa fa-square"></i>Discomfort that goes into your back, jaw, throat, or arm </li>
+                    <li><i class="fa-li fa fa-square"></i>Fullness, indigestion, or a choking feeling (it may feel like heartburn) </li>
+                    <li><i class="fa-li fa fa-square"></i>Sweating, upset stomach, vomiting, or dizziness </li>
+                    <li><i class="fa-li fa fa-square"></i>Severe weakness, anxiety, fatigue, or shortness of breath </li>
+                    <li><i class="fa-li fa fa-square"></i>Fast or uneven heartbeat </li>
+               </ul>
+            <p class="lead my-2">
+               Symptoms can be different from person to person or from one heart attack to another. Women are more likely to have symptoms like an upset stomach, shortness of breath, or back or jaw pain.
+               With some heart attacks, you won’t notice any symptoms (a "silent" myocardial infarction). This is more common in people who have diabetes. 
+            </p>
+        </div>
+
+        <div class="col-4 mx-auto">
+        <div class="mb-5">
+            <figure class="figure">
+            <img src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2019/05/there-are-different-types-of-heart-attacks-1558342944.jpg" class="figure-img img-fluid rounded" alt="heartattack 1">
+            </figure>
+        </div>
+        <div class="mt-auto">
+            <figure class="figure">
+            <img src="http://www.mastylecare.org/wp-content/uploads/2017/03/heart-attack-recognize-800x400.jpg" class="figure-img img-fluid rounded" alt="heartattack 1">
+            </figure>
+        </div>
+        </div>  
+  </div>
+<div>
+  <h2 class="my-2">Heart Attack Causes</h2>
+            
+    <p class="text-break lead my-2 ">
+        Your heart muscle needs a constant supply of oxygen-rich blood. Your coronary arteries give your heart this critical blood supply. If you have coronary artery disease, those arteries become narrow, and blood can’t flow as well as it should. When your blood supply is blocked, you have a heart attack.
+        Fat, calcium, proteins, and inflammatory cells build up in your arteries to form plaques. These plaque deposits are hard on the outside and soft and mushy on the inside.
+    </p>
+
+    <p class="text-break lead my-2 ">
+        When the plaque is hard, the outer shell cracks. This is called a rupture. Platelets (disc-shaped things in your blood that help it clot) come to the area, and blood clots form around the plaque. If a blood clot blocks your artery, your heart muscle becomes starved for oxygen. The muscle cells soon die, causing permanent damage.
+    </p>
+
+    <p class="text-break lead my-2 ">
+        Rarely, a spasm in your coronary artery can also cause a heart attack. During this coronary spasm, your arteries restrict or spasm on and off, cutting off the blood supply to your heart muscle (ischemia). It can happen while you’re at rest and even if you don’t have serious coronary artery disease.
+    </p>
+</div>
+
+{% comment "Embedding Youtube videos" %}{% endcomment %}
+
+<h1 class="container-fluid text-center my-4 display-6">For detailed description, Watch below Video</h1>
+    <div class="container-fluid text-center embed-responsive embed-responsive-16by9 my-3">
+        <iframe  width="640" height="360" src="https://www.youtube.com/embed/3_PYnWVoUzM" title="YouTube video player" frameborder="15" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="d-grid gap-2 col-6 mx-auto my-4">
+        <a class="btn btn-outline-primary" href="{% url 'Checkup' %}" role="button">Click to Checkup Yourself</a>
+    </div>
+
+</div>
+{% endblock body %}

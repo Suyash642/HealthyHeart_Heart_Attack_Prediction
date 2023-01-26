@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+{% block title %}  Checkup Result  {% endblock title %}
+
+{% block body%}
+
+<div class="p-3 mb-2 bg-primary text-white">
+
+    <div class="container py-3 ">
+        <h1 class="display-1" align="center">Heart Attack Predictor</h1>
+        <p class="lead text-center">
+        Report is generated, Check it 
+        </p>
+    </div>
+
+</div>
+
+<div class="container my-4">
+    <h1 class="display-3 text-center">Your Report </h1>
+</div>
+
+<div class="container">
+    <table class="table">
+    <thead>
+        <tr>
+        <th scope="row" >Labels</th>
+        <th scope="col">User Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">Name</th>
+        <td>{{name}}</td>
+        </tr>
+
+        <tr>
+        <th scope="row">Age</th>
+        <td>{{age}}</td>
+        </tr>
+
+        <tr>
+        <th scope="row">Gender</th>
+        <td>
+            {% if gender == '0' %}
+                {{ "Female" }}
+            {% else %}
+                {{ "Male" }}
+            {% endif %}
+        </td>
+        </tr>
+
+        <tr>
+        <th scope="row">Chestpain Type</th>
+        <td>
+            {% if chestpain == '1'%}
+                {{ "Typical Angina" }}
+            {% elif chestpain == '2'%}
+                {{"Atypical Angina"}}
+            {% elif chestpain == '3'%}
+                {{"Non-Angina"}}
+            {% else %}
+                {{ "Asymptomatic Angina" }}
+            {% endif %} 
+        </td>
+        </tr>
+
+        <tr>
+        <th scope="row">Rest Blood Pressure</th>
+        <td>{{bp}}</td>
+        </tr>
+
+        <tr>
+        <th scope="row">Cholestrol</th>
+        <td>{{cholestrol}}</td>
+        </tr>
+
+        <tr>
+        <th scope="row">Heart Rate (BPM)</th>
+        <td>{{heartrate }}</td>
+        </tr>
+
+        <tr>
+        <th scope="row">Exercise induced Angina</th>
+        <td>{% if eia == '1' %}
+                {{ "Yes" }}
+            {% else %}
+                {{ "No" }}
+            {% endif %}</td>
+        </tr>
+
+        <tr>
+        <th scope="row">ST depression induced by exercise relative to rest</th>
+        <td>{{oldpeak}}</td>
+        </tr>
+
+        <tr>
+        <th scope="row">Slope of Peak Exercise ST Segment</th>
+        <td>
+            {% if slope == '0'%}
+                {{ "Up" }}
+            {% elif slope == '1'%}
+                {{"Flat"}}
+            {% else %}
+                {{ "Down" }}
+            {% endif %}
+        </td>
+        </tr>
+
+        <tr>
+        <th scope="row">Number of major vessels colored by flouroscopy</th>
+        <td>{{vessels}}</td>
+        </tr>
+
+        <tr>
+        <th scope="row">β-Thalassemia</th>
+        <td>
+            {% if thal == '1' %}
+                {{ "Normal" }}
+            {% elif thal == '2'%}
+                {{"Fixed Defect"}}
+            {% else %}
+                {{ "Reversable Defect" }}
+            {% endif %}
+        </td>
+        </tr>
+        </tbody>
+
+        <tfooter>
+        {% if  output == 1%}
+            <tr class="table-danger">
+            <th scope="row">Result</th> 
+            <td class="table-danger">Your are more sucesptible to cardiac arrest in future</td>
+            </tr>
+        {% else %}
+            <tr class="table-success">
+            <th scope="row">Result</th> 
+            <td class="table-success">Your are Healthy and not sucesptible to cardiac arrest in future</td>
+            </tr>
+        {% endif %}
+    </tfooter>
+    </table>
+</div>
+
+
+
+{% endblock body%}
